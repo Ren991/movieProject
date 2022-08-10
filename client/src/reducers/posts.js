@@ -22,6 +22,7 @@ export default (state = [], action)=>{
         
         case CREATE:
             return [...state, action.payload];
+            
     
         default:
             return state;
