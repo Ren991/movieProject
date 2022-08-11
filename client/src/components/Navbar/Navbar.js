@@ -3,6 +3,7 @@ import { Link , useNavigate, useLocation} from 'react-router-dom'
 import { AppBar,Toolbar,Typography,Button,Avatar } from '@material-ui/core'
 import useStyles from './styles'
 import { useDispatch } from 'react-redux'
+import Movies from '../../images/Movies.png';
 import decode from 'jwt-decode';
 
 
@@ -35,8 +36,10 @@ const Navbar =()=>{
     return(
         <AppBar className={classes.appBar} position="static" color="inherit">
             <div className={classes.brandContainer}>
-                <Typography component={Link} to="/posts" className={classes.heading} variant="h2" align="center">Movie Project</Typography>
-                <img className={classes.image} src={"https://images.ecestaticos.com/leU_vr7vwdksdq_fkLknTvqTmlw=/0x90:1696x1041/1600x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F4eb%2Fa77%2F5f9%2F4eba775f9bbe9f2f8c602b8731e81a46.jpg"} alt="movies" height="60"  />
+               <Link to="/" className={classes.brandContainer}>
+               <img component={Link} to="/posts" src={Movies} alt="icon" height="125px" />
+               </Link>
+               
             </div>
            
             <Toolbar className={classes.toolbar}>
