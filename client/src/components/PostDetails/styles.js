@@ -3,9 +3,14 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
   media: {
     borderRadius: '20px',
-    objectFit: 'cover',
-    width: '100%',
-    maxHeight: '600px',
+    /* objectFit: 'cover',
+     width: '60%',
+    maxHeight: '600px', 
+    maxWidth:'600px' */
+    width: '200px',
+  height: '300px',
+  objectFit: 'contain',
+
 
   },
   card: {
