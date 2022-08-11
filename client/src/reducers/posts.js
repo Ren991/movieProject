@@ -8,7 +8,7 @@ export default (state = { isLoading: true, posts: [] }, action) => {
         return { ...state, isLoading: false };
 
       case FETCH_POST:
-        return { ...state, post: action.payload };
+        return { ...state, post: action.payload.post };
       case FETCH_ALL:
         return {
           ...state,

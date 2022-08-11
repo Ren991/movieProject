@@ -34,7 +34,7 @@ const PostDetails=()=>{
         <div className={classes.card}>
           <div className={classes.section}>
             <Typography variant="h3" component="h2">{post.title}</Typography>
-            <Typography gutterBottom variant="h6" color="textSecondary" component="h2">{post.tags.map((tag) => `#${tag} `)}</Typography>
+            <Typography gutterBottom variant="h6" color="textSecondary" component="h2">{post?.tags?.map((tag) => `#${tag} `)}</Typography>
             <Typography gutterBottom variant="body1" component="p">{post.message}</Typography>
             <Typography variant="h6">Created by: {post.name}</Typography>
             <Typography variant="body1">{moment(post.createdAt).fromNow()}</Typography>
