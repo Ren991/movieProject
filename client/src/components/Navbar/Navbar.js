@@ -4,6 +4,7 @@ import { AppBar,Toolbar,Typography,Button,Avatar } from '@material-ui/core'
 import useStyles from './styles'
 import { useDispatch } from 'react-redux'
 import Movies from '../../images/Movies.png';
+import Swal from 'sweetalert2'
 import decode from 'jwt-decode';
 
 
@@ -15,20 +16,52 @@ const Navbar =()=>{
     const location = useLocation()
    
     
+
     const logout = ()=>{
-        dispatch({type:'LOGOUT'});
-        navigate('/auth')
-        setUser(null)
+      
+        
+        Swal.fire({
+            title: 'Are you sure you want to logout?',
+            
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'See you soon',
+                
+                
+              )
+              dispatch({type:'LOGOUT'});
+
+
+
+              navigate('/auth')
+      
+              setUser(null)
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              
+              navigate('/posts')
+            }
+          })
+
+       
     }
 
     useEffect(() => {
         const token = user?.token;
     
-       /*  if (token) {
+        if (token) {
           const decodedToken = decode(token);
     
           if (decodedToken.exp * 1000 < new Date().getTime()) logout();
-        } */
+        } 
     
         setUser(JSON.parse(localStorage.getItem('profile')));
       }, [location]);
@@ -41,8 +74,9 @@ const Navbar =()=>{
                </Link>
                
             </div>
-           
+            <Typography className={classes.userName} variant="h5">Help someone decide which movie to watch.</Typography>
             <Toolbar className={classes.toolbar}>
+            
                 {user?.result ?  (
                     <div className={classes.profile}>
                         <Avatar className={classes.purple} >{user?.result.name.charAt(0)} </Avatar>

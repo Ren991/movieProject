@@ -6,6 +6,7 @@ export default makeStyles({
     paddingTop: '56.25%',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     backgroundBlendMode: 'darken',
+    objectFit:'cover',
     cursor:'pointer'
   },
   border: {
@@ -15,6 +16,8 @@ export default makeStyles({
     height: '100%',
   },
   card: {
+    //backgroundColor:"rgba(7, 53, 193, 0.49)",
+    //color: 'white',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',

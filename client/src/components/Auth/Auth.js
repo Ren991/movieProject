@@ -136,11 +136,12 @@ const Auth = () => {
     setIsSignup((prevIsSignup) => !prevIsSignup);
     setShowPassword(false);
   };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (isSignup) {
+      
       dispatch(signup(formData, history));
       
     } else {
