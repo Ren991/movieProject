@@ -4,13 +4,15 @@ export default makeStyles((theme) => ({
   
   media: {
     borderRadius: '20px',
-    /* objectFit: 'cover',
-     width: '60%',
+    //objectFit: 'scale-down',
+     /*width: '60%',
     maxHeight: '600px', 
     maxWidth:'600px' */
     width: '200px',
   height: '300px',
-  objectFit: 'contain',
+  objectFit: 'cover',
+  objectPosition: 'inherit'
+  
 
 
   },
