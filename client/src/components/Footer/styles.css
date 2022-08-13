@@ -1,0 +1,19 @@
+.footer-distributed{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 12vh;
+    margin-top: 3rem;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.icons{
+    display: flex;
+    justify-content:space-around; 
+}
+.title{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}

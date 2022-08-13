@@ -70,11 +70,11 @@ const Navbar =()=>{
         <AppBar className={classes.appBar} position="static" color="inherit">
             <div className={classes.brandContainer}>
                <Link to="/" className={classes.brandContainer}>
-               <img component={Link} to="/posts" src={Movies} alt="icon" height="125px" />
+               <img component={Link} to="/posts" src={Movies} alt="icon" height="100px" />
                </Link>
                
             </div>
-            <Typography className={classes.userName} variant="h5">Help someone decide which movie to watch.</Typography>
+            {/* <Typography variant="h6">Help someone decide which movie to watch.</Typography> */}
             <Toolbar className={classes.toolbar}>
             
                 {user?.result ?  (
@@ -90,6 +90,7 @@ const Navbar =()=>{
                     
                 )}
             </Toolbar>
+            
         </AppBar>
     )
 }

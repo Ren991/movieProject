@@ -151,7 +151,7 @@ const Auth = () => {
     }
   };
 
-   const createOrGetUser = async (response) => {
+   /* const createOrGetUser = async (response) => {
     const result = jwt_decode(response?.credential);
     const token = response?.credential;
     console.log(result)
@@ -164,7 +164,7 @@ const Auth = () => {
     } catch (error) {
         console.log(error);
     }
-  }; 
+  };  */
 
   
 
@@ -192,11 +192,11 @@ const Auth = () => {
           <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
             { isSignup ? 'Sign Up' : 'Sign In' }
           </Button>
-           <GoogleLogin
+          {/*  <GoogleLogin
              onSuccess={(response)=>
                 createOrGetUser(response)}
                 onError={()=>console.log('Error')}
-          /> 
+          />  */}
           <Grid container justify="flex-end">
             <Grid item>
               <Button onClick={switchMode}>
