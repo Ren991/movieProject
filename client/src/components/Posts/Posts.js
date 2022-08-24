@@ -1,15 +1,24 @@
 import React from 'react';
 import { Grid, CircularProgress } from '@material-ui/core';
 import { useSelector } from 'react-redux';
-
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
 import Post from './Post/Post';
 import useStyles from './styles';
 
 const Posts = ({ setCurrentId }) => {
   const { posts, isLoading } = useSelector((state) => state.posts);
   const classes = useStyles();
+  const history = useNavigate();
+  if (!posts.length && !isLoading) {
+    Swal.fire({ 
+            
+      title:'No se encontraron resultados' ,
+      icon:'warning'
+  })
+  history('/')
 
-  if (!posts.length && !isLoading) return 'NO POST FOUNDED'
+  } 
   
 
   return (

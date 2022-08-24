@@ -2,28 +2,34 @@ import * as React from 'react';
 import github from '../../images/github.png';
 import mail from '../../images/mail.png';
 import linkedin from '../../images/linkedin.png';
+import flecha from '../../images/flecha.jpg'
 import { Link} from 'react-router-dom';
 
-//import {Typography} from '@material-ui/core'
+
 import "./styles.css"
-import {Typography } from '@material-ui/core';
+
 
  const Footer=()=> {
   return (
    
     <div className="footer-distributed">
-        <Link to="/" className="title">
-        <Typography   variant="h6">Renzo Beccari</Typography>
-        </Link>
+        
+       
+      
           <div className="icons">
+          <Link to="/" >
+          
+              <img src={flecha} alt="flecha" height="50px"/>
+            
+            </Link>
             <a href='https://github.com/Ren991' target="_blank">
-              <img src={github} height="50px"/>
+              <img src={github} alt="github" height="50px"/>
             </a>
             <a href='https://portfolio-beccari.vercel.app/' target="_blank">
-              <img src={mail} height="50px"/>
+              <img src={mail} alt="mail" height="50px"/>
             </a>
             <a href='https://www.linkedin.com/in/renzo-beccari/' target="_blank">
-              <img src={linkedin} height="50px"/>
+              <img src={linkedin} alt="linkedin" height="50px"/>
             </a>
           </div>
     </div>

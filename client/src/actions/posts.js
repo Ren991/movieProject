@@ -45,7 +45,7 @@ export const createPost = (post, history) => async (dispatch) => {
 
     dispatch({ type: CREATE, payload: data });
     Swal.fire({ 
-      title:'Thanks for uploading your movie Post!',
+      title:'¡Gracias por subir la publicación!',
       icon:'success'
   })
     history(`/posts/${data._id}`);

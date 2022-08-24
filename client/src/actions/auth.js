@@ -7,17 +7,18 @@ export const signin = (formData, history) => async(dispatch)=>{
     try {
         const {data} = await api.signIn(formData);
         dispatch({type: AUTH, data})
-        //console.log(type)
+        
         history('/posts')
         Swal.fire({ 
-            title:'Welcome back!',
+            
+            title:'Bienvenid@ nuevamente!' ,
             icon:'success'
         })
         
     } catch (error) {
         Swal.fire({
             title: 'Error!',
-            text: 'Invalid credentials, please try again later.',
+            text: 'Datos incorrectos,por favor intente nuevamente.',
             icon: 'error',
             confirmButtonText: 'Cool'
           })
@@ -31,14 +32,14 @@ export const signup = (formData, history) => async(dispatch)=>{
         console.log(dispatch)
         history('/posts')
         Swal.fire({ 
-            title:'Welcome back!',
+            title:'Bienvenid@!',
             icon:'success'
         })
     } catch (error) {
         console.log(error)
         Swal.fire({
             title: 'Error!',
-            text: 'Invalid credentials, please try again later.',
+            text: 'Datos incorrectos,por favor intente nuevamente.',
             icon: 'error',
             confirmButtonText: 'Cool'
           })

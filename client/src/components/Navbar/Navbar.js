@@ -21,17 +21,17 @@ const Navbar =()=>{
       
         
         Swal.fire({
-            title: 'Are you sure you want to logout?',
+            title: 'Seguro que quieres cerrar sesión?',
             
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonText: 'Yes',
+            confirmButtonText: 'Si',
             cancelButtonText: 'No',
             reverseButtons: true
           }).then((result) => {
             if (result.isConfirmed) {
               Swal.fire(
-                'See you soon',
+                'Hasta pronto!',
                 
                 
               )

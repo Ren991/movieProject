@@ -33,7 +33,7 @@ console.log(post)
     if (likes?.length > 0) {
       return likes.find((like) => like === (user?.result?.jti || user?.result?._id))
         ? (
-          <><ThumbUpAltIcon fontSize="small" />&nbsp;{likes.length > 2 ? `You and ${likes.length - 1} others` : `${likes.length} like${likes.length > 1 ? 's' : ''}`}</>
+          <><ThumbUpAltIcon fontSize="small" />&nbsp;{likes.length > 2 ? `Tu y ${likes.length - 1} personas más ` : `${likes.length} like${likes.length > 1 ? 's' : ''}`}</>
         ) : (
           <><ThumbUpAltOutlined fontSize="small" />&nbsp;{likes.length} {likes.length === 1 ? 'Like' : 'Likes'}</>
         );
@@ -80,7 +80,7 @@ console.log(post)
 
         {(user?.result?.jti === post?.creator || user?.result?._id === post?.creator) && (
           <Button size="small" color="secondary" onClick={() => dispatch(deletePost(post._id))}>
-            <DeleteIcon fontSize="small" /> Delete
+            <DeleteIcon fontSize="small" /> Eliminar
           </Button>
         )}
       </CardActions>

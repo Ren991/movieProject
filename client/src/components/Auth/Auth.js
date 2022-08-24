@@ -43,20 +43,7 @@ const Auth = () => {
     }
   };
 
-   /* const createOrGetUser = async (response) => {
-    const result = jwt_decode(response?.credential);
-    const token = response?.credential;
-    console.log(result)
-    console.log(response.credential)
-    console.log(token)
-
-    try {
-        dispatch({type: AUTH, data:{result, token}})
-        history("/")
-    } catch (error) {
-        console.log(error);
-    }
-  };  */
+  
 
   
 
@@ -73,13 +60,13 @@ const Auth = () => {
           <Grid container spacing={2}>
             { isSignup && (
             <>
-              <Input name="firstName" label="First Name" handleChange={handleChange} autoFocus half />
-              <Input name="lastName" label="Last Name" handleChange={handleChange} half />
+              <Input name="firstName" label="Nombre" handleChange={handleChange} autoFocus half />
+              <Input name="lastName" label="Apellido" handleChange={handleChange} half />
             </>
             )}
-            <Input name="email" label="Email Address" handleChange={handleChange} type="email" />
-            <Input name="password" label="Password" handleChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword} />
-            { isSignup && <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange} type="password" /> }
+            <Input name="email" label="Email" handleChange={handleChange} type="email" />
+            <Input name="password" label="Contraseña" handleChange={handleChange} type={showPassword ? 'text' : 'password'} handleShowPassword={handleShowPassword} />
+            { isSignup && <Input name="confirmPassword" label="Repetir contraseña" handleChange={handleChange} type="password" /> }
           </Grid>
           <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
             { isSignup ? 'Sign Up' : 'Sign In' }
@@ -88,7 +75,7 @@ const Auth = () => {
           <Grid container justify="flex-end">
             <Grid item>
               <Button onClick={switchMode}>
-                { isSignup ? 'Already have an account? Sign in' : "Don't have an account? Sign Up" }
+                { isSignup ? 'Ya tienes una cuenta? Sign in' : "No tienes una cuenta? Sign Up" }
               </Button>
             </Grid>
           </Grid>
