@@ -1,5 +1,6 @@
 import { FETCH_ALL,FETCH_POST,FETCH_BY_SEARCH,START_LOADING,END_LOADING, CREATE, UPDATE, DELETE, LIKE } from '../constants/actionTypes';
 import * as api from '../api/index.js';
+import Swal from 'sweetalert2'
 
 export const getPost = (id) => async (dispatch) => {
   try {
@@ -43,6 +44,10 @@ export const createPost = (post, history) => async (dispatch) => {
     const { data } = await api.createPost(post);
 
     dispatch({ type: CREATE, payload: data });
+    Swal.fire({ 
+      title:'Thanks for uploading your movie Post!',
+      icon:'success'
+  })
     history(`/posts/${data._id}`);
   } catch (error) {
     console.log(error);

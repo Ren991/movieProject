@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container,Typography } from '@material-ui/core';
+import { Container} from '@material-ui/core';
 import {BrowserRouter, Routes, Route,Navigate} from 'react-router-dom'
 
 import Navbar from './components/Navbar/Navbar';

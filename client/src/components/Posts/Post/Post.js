@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, CardActions, CardContent, CardMedia, Button, Typography, ButtonBase } from '@material-ui/core';
+import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ThumbUpAltOutlined from '@material-ui/icons/ThumbUpAltOutlined';
 import DeleteIcon from '@material-ui/icons/Delete'
@@ -16,7 +16,7 @@ const Post = ({ post, setCurrentId }) => {
   const [likes, setLikes] = useState(post?.likes)
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem('profile'));
-
+console.log(post)
   const userId = user?.result.googleId || user?.result?._id;
   const hasLikedPost = post?.likes?.find((like) => like === userId);
 
@@ -64,7 +64,7 @@ const Post = ({ post, setCurrentId }) => {
         </div>
       )}
       <div className={classes.deatils}>
-        <Typography variant="body2" color="textSecondary">&nbsp; &nbsp; &nbsp;{post.tags.map((tag) => `#${tag}  `)} </Typography>
+        <Typography variant="body2" color="textSecondary">&nbsp; &nbsp; &nbsp;{post.tags} </Typography>
       </div>
       <Typography className={classes.title} variant="h4" gutterBottom>{post.title} </Typography>
       <CardContent>
