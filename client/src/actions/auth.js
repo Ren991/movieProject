@@ -4,6 +4,7 @@ import Swal from 'sweetalert2'
 
 
 export const signin = (formData, history) => async(dispatch)=>{
+    /*hola*/ 
     try {
         const {data} = await api.signIn(formData);
         dispatch({type: AUTH, data})
