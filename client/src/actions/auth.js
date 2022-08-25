@@ -29,7 +29,7 @@ export const signup = (formData, history) => async(dispatch)=>{
     try {
         const {data} = await api.signUp(formData);
         dispatch({type: AUTH, data})
-        console.log(dispatch)
+        //console.log(dispatch)
         history('/posts')
         Swal.fire({ 
             title:'Bienvenid@!',

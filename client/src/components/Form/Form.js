@@ -20,7 +20,7 @@ const Form = ({ currentId, setCurrentId }) => {
     setCurrentId(0);
     setPostData({ title: '', message: '', tags: '', selectedFile: '' });
   };
-  console.log(postData)
+  //console.log(postData)
   useEffect(() => {
     if (!post?.title) clear();
     if (post) setPostData(post);

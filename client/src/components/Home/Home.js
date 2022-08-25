@@ -36,7 +36,7 @@ const Home = () => {
       history('/');
     }
   };
-  console.log(tags)
+  //console.log(tags)
 
   const handleKeyPress = (e) => {
     if (e.keyCode === 13) {

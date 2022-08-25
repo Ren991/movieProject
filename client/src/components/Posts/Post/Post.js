@@ -16,7 +16,7 @@ const Post = ({ post, setCurrentId }) => {
   const [likes, setLikes] = useState(post?.likes)
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem('profile'));
-console.log(post)
+
   const userId = user?.result.googleId || user?.result?._id;
   const hasLikedPost = post?.likes?.find((like) => like === userId);
 
